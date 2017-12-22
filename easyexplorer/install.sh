@@ -1,7 +1,7 @@
 #!/bin/sh
 source /koolshare/scripts/base.sh
 MODULE=easyexplorer
-VERSION="0.0.1"
+VERSION="0.0.2"
 cd /tmp
 cp -rf /tmp/easyexplorer/bin/* /koolshare/bin/
 cp -rf /tmp/easyexplorer/scripts/* /koolshare/scripts/
@@ -20,5 +20,9 @@ dbus set softcenter_module_easyexplorer_title="EasyExplorer文件同步"
 dbus set softcenter_module_easyexplorer_description="EasyExplorer 跨设备文件同步+DLNA流媒体。"
 dbus set softcenter_module_easyexplorer_version=`dbus get easyexplorer_version`
 rm -rf /tmp/easyexplorer* >/dev/null 2>&1
+ee_en=`dbus get easyexplorer_enable`
+if [ "${ee_en}"x = "1"x ];then
+    /koolshare/scripts/easyexplorer_config.sh
+fi
 logger "[软件中心]: 完成easyexplorer安装"
 exit

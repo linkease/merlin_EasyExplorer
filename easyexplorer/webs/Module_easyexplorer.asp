@@ -680,26 +680,6 @@ function menu_hook(title, tab) {
     }
 }
 
-function openShutManager(oSourceObj, oTargetObj, shutAble, oOpenTip, oShutTip) {
-    var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
-    var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
-    var openTip = oOpenTip || "";
-    var shutTip = oShutTip || "";
-    if (targetObj.style.display != "none") {
-        if (shutAble) return;
-        targetObj.style.display = "none";
-        if (openTip && shutTip) {
-            sourceObj.innerHTML = shutTip;
-        }
-    } else {
-        targetObj.style.display = "block";
-        if (openTip && shutTip) {
-            sourceObj.innerHTML = openTip;
-        }
-    }
-}
-
-
 function showSSLoadingBar(seconds){
     if(window.scrollTo)
         window.scrollTo(0,0);
@@ -898,7 +878,10 @@ function version_show(){
                                         </div>
                                         <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
                                         <div class="SimpleNote">
-                                            <li>EasyExplorer 跨设备文件同步+DLNA流媒体</li>
+                                            <h3>EasyExplorer 跨设备文件同步+DLNA流媒体!</h3>
+                                            <li><i>【注意】：请保护好你的DDNSTO/EasyExplorer的Token，如果被其他人获知，那么下一个摄影大师可能就是你！！！</i></li>
+                                            <li> EasyExplorer文件同步目前处于测试阶段，仅提供给koolshare固件用户使用，请勿用于反动、不健康等用途；</li>
+                                            <li> 教程：<a id="gfw_number" href="http://koolshare.cn/forum-98-1.html" target="_blank"><i>EasyExplorer文件同步使用教程</i></a></li>
                                         </div>
                                         <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
                                             <thead>
@@ -946,7 +929,6 @@ function version_show(){
                                                 <th>管理/帮助</th>
                                                 <td>
                                                     <input class="easyexplorer_btn" id="ddnsto_website" style="cursor:pointer;" type="submit" value="获取Token" />
-                                                    <input class="easyexplorer_btn" onclick="openShutManager(this,'NoteBox',false,'关闭使用说明','EasyExplorer使用说明') " style="cursor:pointer;" type="submit" value="帮助信息" />
                                                     <input class="easyexplorer_btn" id="easyexplorer_website" style="cursor:pointer;width:30%" type="submit" value="访问EasyExplorer" />
                                                 </td>
                                             </tr>
@@ -955,11 +937,6 @@ function version_show(){
                                         <div id="warning" style="font-size:14px;margin:20px auto;"></div>
                                         <div class="apply_gen">
                                             <input class="button_gen" id="cmdBtn" onClick="onSubmitCtrl(this, ' Refresh ')" type="button" value="提交" />
-                                        </div>
-                                        <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-                                        <div id="NoteBox" style="display:none">
-                                            <li> EasyExplorer文件同步目前处于测试阶段，仅提供给koolshare固件用户使用，请勿用于反动、不健康等用途；</li>
-                                            <li> 教程：<a id="gfw_number" href="http://koolshare.cn/forum-98-1.html" target="_blank"><i>EasyExplorer文件同步使用教程</i></a></li>
                                         </div>
                                     </td>
                                 </tr>

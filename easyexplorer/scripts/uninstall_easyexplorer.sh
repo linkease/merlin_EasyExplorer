@@ -15,9 +15,17 @@ rm -f /koolshare/bin/easy-explorer
 rm -f /koolshare/bin/easy-explorer.log
 rm -f /koolshare/bin/_ffprobe_cache /koolshare/scripts/_ffprobe_cache
 rm -f /tmp/var/run/easy-explorer.pid
+easyexplorer_iptables_num=$(iptables -nL INPUT | grep -ci "INPUT_EasyExplorer")
+while [[ "${easyexplorer_iptables_num}" != 0 ]]  
+do
+    iptables -D INPUT -j INPUT_EasyExplorer
+    easyexplorer_iptables_num=$(expr ${easyexplorer_iptables_num} - 1)
+done
+iptables -F INPUT_EasyExplorer
+iptables -X INPUT_EasyExplorer
 rm -fr /tmp/easyexplorer* >/dev/null 2>&1
+dbus remove __event__onnatstart_easyexplorer
 values=`dbus list easyexplorer | cut -d "=" -f 1`
-
 for value in $values
 do
 dbus remove $value 
