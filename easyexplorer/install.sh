@@ -1,8 +1,9 @@
 #!/bin/sh
 source /koolshare/scripts/base.sh
 MODULE=easyexplorer
-VERSION="0.0.2"
+VERSION="0.0.3"
 cd /tmp
+killall easy-explorer
 cp -rf /tmp/easyexplorer/bin/* /koolshare/bin/
 cp -rf /tmp/easyexplorer/scripts/* /koolshare/scripts/
 cp -rf /tmp/easyexplorer/webs/* /koolshare/webs/
