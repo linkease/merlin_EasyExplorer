@@ -916,7 +916,7 @@ function version_show(){
                                             <tr>
                                                 <th>Token</th>
                                                 <td>
-                                                    <input style="width:300px;background-image: none;background-color: #576d73;border:1px solid gray" type="text" class="input_ss_table" id="easyexplorer_token" name="easyexplorer_token" maxlength="100" value="">
+                                                    <input style="width:300px;background-image: none;background-color: #576d73;border:1px solid gray" type="password" class="input_ss_table" id="easyexplorer_token" name="easyexplorer_token" maxlength="100" value="" autocomplete="new-password" autocorrect="off" autocapitalize="off" onBlur="switchType(this, false);" onFocus="switchType(this, true);">
                                                 </td>
                                             </tr>
                                             <tr>

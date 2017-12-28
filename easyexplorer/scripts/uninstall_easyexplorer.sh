@@ -12,8 +12,8 @@ rm -f /koolshare/webs/Module_easyexplorer.asp
 rm -f /koolshare/res/icon-easyexplorer.png
 rm -f /koolshare/res/easyexplorer_check.html
 rm -f /koolshare/bin/easy-explorer
-rm -f /koolshare/bin/easy-explorer.log
-rm -f /koolshare/bin/_ffprobe_cache /koolshare/scripts/_ffprobe_cache
+rm -f /koolshare/bin/easy-explorer.log /tmp/easy-explorer.log
+rm -f /koolshare/bin/_ffprobe_cache /koolshare/scripts/_ffprobe_cache /tmp/_ffprobe_cache
 rm -f /tmp/var/run/easy-explorer.pid
 easyexplorer_iptables_num=$(iptables -nL INPUT | grep -ci "INPUT_EasyExplorer")
 while [[ "${easyexplorer_iptables_num}" != 0 ]]  

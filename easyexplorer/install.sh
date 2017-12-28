@@ -1,9 +1,11 @@
 #!/bin/sh
 source /koolshare/scripts/base.sh
 MODULE=easyexplorer
-VERSION="0.0.3"
+VERSION="0.0.4"
 cd /tmp
 killall easy-explorer
+rm -f /koolshare/bin/easy-explorer.log
+rm -f /koolshare/bin/_ffprobe_cache /koolshare/scripts/_ffprobe_cache
 cp -rf /tmp/easyexplorer/bin/* /koolshare/bin/
 cp -rf /tmp/easyexplorer/scripts/* /koolshare/scripts/
 cp -rf /tmp/easyexplorer/webs/* /koolshare/webs/
