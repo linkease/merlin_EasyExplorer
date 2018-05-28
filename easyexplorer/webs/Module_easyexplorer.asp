@@ -235,10 +235,6 @@ function init(){
     version_show();
     initial_dir();
     check_dir_path();
-    $j("#ddnsto_website").click(
-        function() {
-        window.open("https://ddns.to");
-        });
     $j("#easyexplorer_website").click(
         function() {
         window.open("http://" + r_lan_ipaddr + ":8899");
@@ -882,6 +878,7 @@ function version_show(){
                                             <li><i>【注意】：请保护好你的DDNSTO/EasyExplorer的Token，如果被其他人获知，那么下一个摄影大师可能就是你！！！</i></li>
                                             <li> EasyExplorer文件同步目前处于测试阶段，仅提供给koolshare固件用户使用，请勿用于反动、不健康等用途；</li>
                                             <li> 教程：<a id="gfw_number" href="http://koolshare.cn/forum-98-1.html" target="_blank"><i>EasyExplorer文件同步使用教程</i></a></li>
+                                            <li>【注意】：因验证方式改变，原有Token和设置失效，最新插件需要您重新登录控制台获取Token并重新设置。</li>
                                         </div>
                                         <table width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
                                             <thead>
@@ -928,8 +925,9 @@ function version_show(){
                                             <tr id="rule_update_switch">
                                                 <th>管理/帮助</th>
                                                 <td>
-                                                    <input class="easyexplorer_btn" id="ddnsto_website" style="cursor:pointer;" type="submit" value="获取Token" />
-                                                    <input class="easyexplorer_btn" id="easyexplorer_website" style="cursor:pointer;width:30%" type="submit" value="访问EasyExplorer" />
+                                                    <a type="button" class="easyexplorer_btn" style="cursor:pointer" target="_blank" href="https://www.ddnsto.com">获取Token</a>
+                                                    <a type="button" class="easyexplorer_btn" id="easyexplorer_website" style="cursor:pointer">访问EasyExplorer</a>
+                                                    <a type="button" class="easyexplorer_btn" style="cursor:pointer" target="_blank" href="http://firmware.koolshare.cn/binary/Easy-Explorer/">EasyExplorer全平台下载</a>
                                                 </td>
                                             </tr>
                                         </table>
