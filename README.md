@@ -2,4 +2,4 @@
 
 ## EasyExplorer for Koolshare Asuswrt-Merlin
 
-### EasyExplorer 跨设备文件同步+DLNA流媒体
+### EasyExplorer 跨设备文件同步

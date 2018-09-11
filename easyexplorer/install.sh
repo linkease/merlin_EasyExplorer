@@ -1,7 +1,6 @@
 #!/bin/sh
 source /koolshare/scripts/base.sh
 MODULE=easyexplorer
-VERSION="0.0.4"
 cd /tmp
 killall easy-explorer
 rm -f /koolshare/bin/easy-explorer.log
@@ -16,8 +15,6 @@ chmod a+x /koolshare/scripts/easyexplorer_config.sh
 chmod a+x /koolshare/scripts/easyexplorer_status.sh
 chmod a+x /koolshare/scripts/uninstall_easyexplorer.sh
 ln -sf /koolshare/scripts/easyexplorer_config.sh /koolshare/init.d/S99easyexplorer.sh
-dbus set easyexplorer_version="${VERSION}"
-dbus set softcenter_module_easyexplorer_install=1
 dbus set softcenter_module_easyexplorer_name=${MODULE}
 dbus set softcenter_module_easyexplorer_title="EasyExplorer文件同步"
 dbus set softcenter_module_easyexplorer_description="EasyExplorer 跨设备文件同步+DLNA流媒体。"
