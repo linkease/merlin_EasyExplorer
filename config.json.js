@@ -1,8 +1,8 @@
 {
     "description": "EasyExplorer 跨设备文件同步+DLNA流媒体", 
     "home_url": "Module_easyexplorer.asp", 
-    "md5": "6277bd85947df58ec9ef064e2fc7bf28", 
+    "md5": "7c4b6a40c3d86cc47bb52010bf02bcc1", 
     "module": "easyexplorer", 
     "title": "EasyExplorer文件同步", 
-    "version": "0.0.10"
+    "version": "1.0"
 }
