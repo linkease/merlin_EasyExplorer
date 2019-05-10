@@ -6,6 +6,10 @@ alias echo_date='echo $(date +%Y年%m月%d日\ %X):'
 BIN=/koolshare/bin/easy-explorer
 PID_FILE=/var/run/easy-explorer.pid
 
+if [ "$(cat /proc/sys/vm/overcommit_memory)"x != "0"x ];then
+    echo 0 > /proc/sys/vm/overcommit_memory
+fi
+
 fun_ntp_sync(){
     ntp_server=`nvram get ntp_server0`
     start_time="`date +%Y%m%d`"
